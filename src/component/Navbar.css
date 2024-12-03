@@ -1,0 +1,21 @@
+.Navbar{
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+.logo{
+    font-size: 50px;
+    cursor: pointer;
+}
+.navbar-ul{
+    display: flex;
+    gap: 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.navbar-ul li:hover{
+    color: white;
+}
