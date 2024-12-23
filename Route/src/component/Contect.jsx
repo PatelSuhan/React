@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Crud = () => {
+const Contect = () => {
 
     const [input, setInput] = useState({
         name: '',
@@ -63,9 +63,10 @@ const Crud = () => {
         const updatedArr = arr.filter((_, i) => i !== index);
         setArr(updatedArr);
       };
-    
-      return (
-        <div className='main'>
+
+    return (
+        <div>
+            <div className='main-contect'>
           <form onSubmit={handleForm}>
             <input
               type="text"
@@ -116,8 +117,8 @@ const Crud = () => {
             </tbody>
           </table>
         </div>
-      );
-    }
+        </div>
+    );
+}
 
-
-export default Crud;
+export default Contect;
