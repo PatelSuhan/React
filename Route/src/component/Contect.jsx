@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Contect = () => {
+
+    const navigate = useNavigate()
+
+    const gotohome = () => {
+      navigate ("/")
+    }
 
     const [input, setInput] = useState({
         name: '',
@@ -117,7 +124,8 @@ const Contect = () => {
             </tbody>
           </table>
         </div>
-        </div>
+        <button onClick={gotohome}>Back To Home</button>
+      </div>
     );
 }
 

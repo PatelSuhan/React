@@ -8,16 +8,19 @@ const Crud = () => {
         password: '',
     
       });
-      const [arr, setArr] = useState([]);
+      const [arr, setArr] = useState(() => {
+        const storedData = localStorage.getItem('data')
+        return storedData ? JSON.parse(storedData): []
+      });
       const [handleUpdate, sethandleUpdate] = useState(false);
       const [editIndex, setEditIndex] = useState(null);
     
-      useEffect(() => {
-        const storedData = localStorage.getItem('data');
-        if (storedData) {
-          setArr(JSON.parse(storedData));
-        }
-      }, []);
+      // useEffect(() => {
+      //   const storedData = localStorage.getItem('data');
+      //   if (storedData) {
+      //     setArr(JSON.parse(storedData));
+      //   }
+      // }, []);
     
       useEffect(() => {
         localStorage.setItem('data', JSON.stringify(arr));
